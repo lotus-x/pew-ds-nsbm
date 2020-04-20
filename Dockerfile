@@ -6,4 +6,4 @@ WORKDIR /app
 
 EXPOSE 8080
 
-CMD vue upgrade && npm run serve
+CMD npm run serve

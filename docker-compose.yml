@@ -8,6 +8,8 @@ services:
       - type: bind
         source: .
         target: /app
+    stdin_open: true
+    tty: true
 
   nginx:
     container_name: pew-ds-nsbm-nginx
