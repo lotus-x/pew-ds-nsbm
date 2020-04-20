@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  node:
+    container_name: pew-ds-nsbm-vue
+    build: .
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+
+  nginx:
+    container_name: pew-ds-nsbm-nginx
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - type: bind
+        source: ./docker/nginx.conf
+        target: /etc/nginx/conf.d/default.conf
